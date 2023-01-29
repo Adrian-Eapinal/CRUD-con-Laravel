@@ -39,7 +39,16 @@ class EmpleadoController extends Controller
     {
         //
 
-        $datosEmpleado = $request->all();
+        //$datosEmpleado = $request->all();
+        $datosEmpleado = request()->except('_token');
+       
+       if($request->hasFile('Foto')){
+        $datosEmpleado['Foto']=$request->file('Foto')->store('uploads','public');
+       }
+
+
+        Empleado::insert($datosEmpleado);
+
         return response()->json($datosEmpleado);
 
     }
@@ -64,7 +73,7 @@ class EmpleadoController extends Controller
     public function edit(Empleado $empleado)
     {
         //
-        return view('empleado.edit');
+       
     }
 
     /**
