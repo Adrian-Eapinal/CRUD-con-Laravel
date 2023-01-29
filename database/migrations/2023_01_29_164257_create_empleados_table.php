@@ -14,8 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('empleados', function (Blueprint $table) {
-            $table->id();
+            $table->id();//autoincrementado
+            $table->string('Nombre');
+            $table->string('ApellidoPaterno');
+            $table->string('ApellidoMaterno');
+            $table->string('Correo');
+            $table->string('Foto');
+
             $table->timestamps();
+
+        
         });
     }
 
