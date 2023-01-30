@@ -15,3 +15,4 @@
 <input type="File" name="Foto" value=""id="Foto">
 <br>
 <input type="Submit" value="Guardar Datos">
+<br>
