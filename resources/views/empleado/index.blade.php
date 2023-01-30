@@ -15,10 +15,17 @@ Mostrar la lista de empleados
 
 
     <tbody>
-        @foreach(  )
+        @foreach( $empleados as $empleado )
         <tr>
-            <td></td>
+            <td>{{$empleado->id }}</td>
+            <td>{{$empleado->Foto}}</td>
+            <td>{{$empleado->Nombre}}</td>
+            <td>{{$empleado->ApellidoPaterno}}</td>
+            <td>{{$empleado->ApellidoMaterno}}</td>
+            <td>{{$empleado->Correo}}</td>
+            <td>Editar | Borrar </td>
         </tr>
+        @endforeach
     </tbody>
 
 </table>
