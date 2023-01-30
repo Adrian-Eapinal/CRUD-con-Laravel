@@ -1,16 +1,17 @@
 <label for="Nombre">Nombre</label>
-<input type="text" name="Nombre" id="Nombre">
+<input type="text" name="Nombre" value="{{$empleado->Nombre}}" id="Nombre">
 <br>
-<label for="Nombre">ApellidoPaterno</label>
-<input type="text" name="ApellidoPaterno" id="ApellidoPaterno">
+<label for="ApellidoPaterno">ApellidoPaterno</label>
+<input type="text" name="ApellidoPaterno" value="{{$empleado->ApellidoPaterno}}" id="ApellidoPaterno">
 <br>
-<label for="Nombre">ApellidoMaterno</label>
-<input type="text"name="ApellidoMaterno" id="ApellidoMaterno">
+<label for="ApellidoMaterno">ApellidoMaterno</label>
+<input type="text"name="ApellidoMaterno"value="{{$empleado->ApellidoMaterno}}" id="ApellidoMaterno">
 <br>
-<label for="Nombre">Correo</label>
-<input type="text" name="Correo" id="Correo">
+<label for="Correo">Correo</label>
+<input type="text" name="Correo" value="{{$empleado->Correo}}"id="Correo">
 <br>
-<label for="Nombre">Foto</label>
-<input type="File" name="Foto" id="Foto">
+<label for="Foto">Foto</label>
+{{$empleado->Foto}}
+<input type="File" name="Foto" value=""id="Foto">
 <br>
 <input type="Submit" value="Guardar Datos">
