@@ -76,6 +76,8 @@ class EmpleadoController extends Controller
     {
         //
        
+        return view('empleado.edit');
+        
     }
 
     /**
